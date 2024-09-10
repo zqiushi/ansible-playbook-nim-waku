@@ -1,0 +1,15 @@
+---
+- name: 'Create compose file: {{ nim_waku_cont_name }}'
+  template:
+    src: 'docker-compose.yml.j2'
+    dest: '{{ nim_waku_cont_vol }}/docker-compose.yml'
+    owner: dockremap
+    group: docker
+    mode: 0664
+
+- name: 'Create container: {{ nim_waku_cont_name }}'
+  community.docker.docker_compose_v2:
+    project_src: '{{ nim_waku_cont_vol }}'
+    recreate: '{{ compose_recreate }}'
+    pull: '{{ compose_pull }}'
+    state: '{{ "restarted" if nim_waku_config.changed else compose_state }}'

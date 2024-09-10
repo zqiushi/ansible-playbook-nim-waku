@@ -1,0 +1,5 @@
+# deploy.yml
+- hosts: host1
+  roles:
+    - { role: infra-role-nim-waku, become: yes }
+
