@@ -64,9 +64,9 @@ This role also goes well together with [infra-role-waku-peers](https://github.co
 
 
 
-ansible-playbook -i inventory tasks/docker.yml --ask-become-pass
+<!-- ansible-playbook -i inventory tasks/docker.yml --ask-become-pass -->
 
-ansible-playbook -i inventory tasks/docker.yml --ask-become-pass
+ansible-playbook -i inventory playbook.yml --ask-become-pass
 
 
 
