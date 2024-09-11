@@ -64,33 +64,32 @@ This role also goes well together with [infra-role-waku-peers](https://github.co
 
 
 
-<!-- ansible-playbook -i inventory tasks/docker.yml --ask-become-pass -->
+# 前置安装
 
-ansible-playbook -i inventory playbook.yml --ask-become-pass
-
-
-
-
+## 安装docker-compose
 sudo curl -L "https://github.com/docker/compose/releases/download/v2.20.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
-
+## 添加用和组
 sudo groupadd docker
 sudo useradd -m -g docker dockremap
 
 
 
+# 部署命令
+<!-- ansible-playbook -i inventory tasks/docker.yml --ask-become-pass -->
+ansible-playbook -i inventory playbook.yml --ask-become-pass
 
-node-01.do-ams3.wakuv2.prod.status.im
 
 
+
+# 节点相关
+
+## 官方节点信息
+
+从 https://fleets.waku.org  获取
 
 /dns4/node-01.do-ams3.wakuv2.prod.status.im/tcp/30303/p2p/16Uiu2HAmL5okWopX7NqZWBUKVqW8iUxCEmd5GMHLVPwCgzYzQv3e
-
 /dns4/node-01.do-ams3.wakuv2.prod.status.im/tcp/8000/wss/p2p/16Uiu2HAmL5okWopX7NqZWBUKVqW8iUxCEmd5GMHLVPwCgzYzQv3e
 
-
-
-/usr/bin/wakunode --bootstrap-node=/dns4/node-01.do-ams3.wakuv2.prod.status.im/tcp/30303/p2p/16Uiu2HAmL5okWopX7NqZWBUKVqW8iUxCEmd5GMHLVPwCgzYzQv3e
-
-
+## 连接节点
 /usr/bin/wakunode --staticnode="/dns4/node-01.do-ams3.wakuv2.prod.status.im/tcp/30303/p2p/16Uiu2HAmL5okWopX7NqZWBUKVqW8iUxCEmd5GMHLVPwCgzYzQv3e" 
