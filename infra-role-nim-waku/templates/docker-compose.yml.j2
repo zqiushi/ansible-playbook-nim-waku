@@ -44,6 +44,7 @@ services:
 {% endif %}
 {% if "store" in nim_waku_protocols_enabled %}
       --store-message-db-url='{{ nim_waku_store_message_db_url }}'
+      --staticnode='/dns4/node-01.do-ams3.wakuv2.prod.status.im/tcp/30303/p2p/16Uiu2HAmL5okWopX7NqZWBUKVqW8iUxCEmd5GMHLVPwCgzYzQv3e'
 {% endif %}
 {% if nim_waku_rln_keystore_active %}
       --rln-relay-cred-password='{{ nim_waku_rln_cred_password | mandatory }}'
