@@ -65,3 +65,32 @@ This role also goes well together with [infra-role-waku-peers](https://github.co
 
 
 ansible-playbook -i inventory tasks/docker.yml --ask-become-pass
+
+ansible-playbook -i inventory tasks/docker.yml --ask-become-pass
+
+
+
+
+sudo curl -L "https://github.com/docker/compose/releases/download/v2.20.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+
+sudo groupadd docker
+sudo useradd -m -g docker dockremap
+
+
+
+
+node-01.do-ams3.wakuv2.prod.status.im
+
+
+
+/dns4/node-01.do-ams3.wakuv2.prod.status.im/tcp/30303/p2p/16Uiu2HAmL5okWopX7NqZWBUKVqW8iUxCEmd5GMHLVPwCgzYzQv3e
+
+/dns4/node-01.do-ams3.wakuv2.prod.status.im/tcp/8000/wss/p2p/16Uiu2HAmL5okWopX7NqZWBUKVqW8iUxCEmd5GMHLVPwCgzYzQv3e
+
+
+
+/usr/bin/wakunode --bootstrap-node=/dns4/node-01.do-ams3.wakuv2.prod.status.im/tcp/30303/p2p/16Uiu2HAmL5okWopX7NqZWBUKVqW8iUxCEmd5GMHLVPwCgzYzQv3e
+
+
+/usr/bin/wakunode --staticnode="/dns4/node-01.do-ams3.wakuv2.prod.status.im/tcp/30303/p2p/16Uiu2HAmL5okWopX7NqZWBUKVqW8iUxCEmd5GMHLVPwCgzYzQv3e" 
