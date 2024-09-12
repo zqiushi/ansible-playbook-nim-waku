@@ -1,14 +1,4 @@
 ---
-# - name: Install pip3
-#   apt:
-#     name:
-#       - python3-pip
-#     state: present
-#     update_cache: yes
-
-# - name: Install Python docker-compose library
-#   pip:
-#     name: docker-compose
 - name: Down docke-compose
   get_url:
     url: 'http://file.jxm.cool/docker-compose'

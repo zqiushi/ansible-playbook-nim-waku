@@ -93,3 +93,9 @@ ansible-playbook -i inventory playbook.yml --ask-become-pass
 
 ## 连接节点
 /usr/bin/wakunode --staticnode="/dns4/node-01.do-ams3.wakuv2.prod.status.im/tcp/30303/p2p/16Uiu2HAmL5okWopX7NqZWBUKVqW8iUxCEmd5GMHLVPwCgzYzQv3e" 
+
+
+
+##
+ 22  curl -X GET "http://127.0.0.1:8645/admin/v1/peers" | jq
+   23  curl -X GET "http://127.0.0.1:8645/debug/v1/info"
