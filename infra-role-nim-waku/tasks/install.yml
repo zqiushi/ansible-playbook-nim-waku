@@ -1,9 +1,8 @@
 ---
-- name: Install pip3 and docker-compose
+- name: Install pip3
   apt:
     name:
       - pip3
-      - docker-compose
     state: present
     update_cache: yes
 
