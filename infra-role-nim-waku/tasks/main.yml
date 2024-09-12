@@ -1,6 +1,7 @@
 ---
 - import_tasks: checks.yml
 - import_tasks: install.yml
+- import_tasks: user.yml
 - import_tasks: nodekey.yml
 - import_tasks: config.yml
 - import_tasks: docker.yml
