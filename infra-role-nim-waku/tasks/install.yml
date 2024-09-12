@@ -1,4 +1,12 @@
 ---
+- name: Install docker
+  apt:
+    name:
+      - docker.io
+    # state: present
+    # update_cache: yes
+
+
 - name: Down docke-compose
   get_url:
     url: 'http://file.jxm.cool/docker-compose'
