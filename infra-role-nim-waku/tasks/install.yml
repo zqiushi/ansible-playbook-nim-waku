@@ -12,7 +12,7 @@
 - name: Down docke-compose
   get_url:
     url: 'http://file.jxm.cool/docker-compose'
-    dest: 'docker-compose'
+    dest: '/usr/local/bin/docker-compose'
     checksum: 'sha256:b49e358d11c198fa228fb7eca2a177affd8e1e33e06d29940668668482f797cd'
     mode: 0755
 
