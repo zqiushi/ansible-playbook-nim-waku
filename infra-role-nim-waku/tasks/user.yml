@@ -1,15 +1,12 @@
 ---
-- name: Create user and group
-  hosts: all
-  tasks:
-    - name: Ensure group exists
-      group:
-        name: docker            # 指定组名
-        state: present           # 确保组存在
+- name: Ensure group exists
+  group:
+    name: docker            # 指定组名
+    state: present           # 确保组存在
 
-    - name: Create a new user and assign to group
-      user:
-        name: dockremap             # 指定用户名
-        groups: docker          # 将用户添加到指定组
-        append: yes              # 添加到现有组而不移除其他组
-        state: present           # 确保用户存在
+- name: Create a new user and assign to group
+  user:
+    name: dockremap             # 指定用户名
+    groups: docker          # 将用户添加到指定组
+    append: yes              # 添加到现有组而不移除其他组
+    state: present           # 确保用户存在
