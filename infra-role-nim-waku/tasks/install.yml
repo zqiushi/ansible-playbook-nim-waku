@@ -9,6 +9,15 @@
     - gnupg
   become: yes
 
+- name: Ensure /etc/apt/keyrings directory exists
+  file:
+    path: /etc/apt/keyrings
+    state: directory
+    mode: '0755'
+  become: yes
+
+
+
 - name: Add Docker official GPG key
   shell: curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
   args:
