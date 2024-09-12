@@ -1,7 +1,11 @@
 ---
-- name: Install docker-compose package
+- name: Install pip3 and docker-compose
   apt:
-    name: docker-compose
+    name:
+      - pip3
+      - docker-compose
+    state: present
+    update_cache: yes
 
 - name: Install Python docker-compose library
   pip:
