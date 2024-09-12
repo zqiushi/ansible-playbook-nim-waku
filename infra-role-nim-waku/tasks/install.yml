@@ -1,21 +1,35 @@
 ---
-- name: Install docker
+- name: Install dependencies
+  apt:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - ca-certificates
+    - curl
+    - gnupg
+  become: yes
+
+- name: Add Docker official GPG key
+  ansible.builtin.command:
+    cmd: curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+  become: yes
+
+- name: Set up Docker repository
+  apt_repository:
+    repo: "deb [arch=amd64 signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu {{ ansible_lsb.codename }} stable"
+    state: present
+  become: yes
+
+- name: Install Docker and Docker Compose plugin
   apt:
     name:
-      - docker.io
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
+      - docker-buildx-plugin
       - docker-compose-plugin
-    # state: present
-    # update_cache: yes
-
-
-- name: Down docke-compose
-  get_url:
-    url: 'http://file.jxm.cool/docker-compose'
-    dest: '/usr/local/bin/docker-compose'
-    checksum: 'sha256:b49e358d11c198fa228fb7eca2a177affd8e1e33e06d29940668668482f797cd'
-    mode: 0755
-
-
+    state: present
+  become: yes
 
 
 - name: Download Websocat installed

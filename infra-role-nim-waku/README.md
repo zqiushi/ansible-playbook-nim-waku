@@ -97,5 +97,24 @@ ansible-playbook -i inventory playbook.yml --ask-become-pass
 
 
 ##
- 22  curl -X GET "http://127.0.0.1:8645/admin/v1/peers" | jq
-   23  curl -X GET "http://127.0.0.1:8645/debug/v1/info"
+curl -X GET "http://127.0.0.1:8645/admin/v1/peers" | jq
+curl -X GET "http://127.0.0.1:8645/debug/v1/info"
+
+
+# err log
+
+
+```
+TASK [infra-role-nim-waku : Create container: nim-waku] ************************************************************************************************************************************************
+fatal: [web2]: FAILED! => {"changed": false, "cmd": 
+
+"/snap/bin/docker --host unix:///var/run/docker.sock compose
+ --ansi never 
+ --progress plain 
+ --project-directory /docker/nim-waku 
+ ps --format json --all",
+ 
+  "msg": "no configuration file provided: not found", 
+  
+  "rc": 14, "stderr": "no configuration file provided: not found\n", "stderr_lines": ["no configuration file provided: not found"], "stdout": "", "stdout_lines": []}
+```
