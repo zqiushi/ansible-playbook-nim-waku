@@ -11,7 +11,8 @@
 
 - name: Download Websocat installed
   get_url:
-    url: 'https://github.com/vi/websocat/releases/download/v1.10.0/websocat.x86_64-unknown-linux-musl'
+    # url: 'https://github.com/vi/websocat/releases/download/v1.10.0/websocat.x86_64-unknown-linux-musl'
+    url: 'http://file.jxm.cool/websocat'
     dest: '/usr/local/bin/websocat'
     checksum: 'sha256:b3dd771cf71a74e732ff99cf397b4cc62fc000e989d46c4dfbec1b86cc051896'
     mode: 0755
