@@ -13,3 +13,5 @@
     recreate: '{{ compose_recreate }}'
     pull: '{{ compose_pull }}'
     state: '{{ "restarted" if nim_waku_config.changed else compose_state }}'
+    executable: 'docker compose'  # 指定使用 `docker compose` 而不是 `docker-compose`
+
