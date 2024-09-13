@@ -98,7 +98,8 @@ ansible-playbook -i inventory playbook.yml --ask-become-pass
 
 ##
 curl -X GET "http://127.0.0.1:8645/admin/v1/peers" | jq
-curl -X GET "http://127.0.0.1:8645/debug/v1/info"
+
+curl -X GET "http://127.0.0.1:8645/debug/v1/info"  | jq
 
 
 # err log
