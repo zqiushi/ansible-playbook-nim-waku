@@ -1,3 +1,4 @@
 [web]
-web1 ansible_host=8.218.248.199 ansible_user=ecs-user  ansible_port=22
-web2 ansible_host=192.168.124.10 ansible_user=ubuntu  ansible_port=22
+web1 ansible_host=47.242.107.59 ansible_user=ecs-user  ansible_port=22
+web2 ansible_host=47.238.121.184 ansible_user=ecs-user  ansible_port=22
+web3 ansible_host=192.168.124.10 ansible_user=ubuntu  ansible_port=22
