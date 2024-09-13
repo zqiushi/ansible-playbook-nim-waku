@@ -19,3 +19,32 @@
 
 
 ```
+
+
+
+
+
+## connect server
+```shell
+curl -X POST "http://127.0.0.1:8645/admin/v1/peers" \
+ -H "content-type: application/json" \
+ -d '["/dns4/iZj6c5n5xc79cot5zfqr71Z.jxm.cool/tcp/30303/p2p/16Uiu2HAkx8XLr8L33wGzNp2XhzJCgZZ8Hg8otwc5JgsWKSj3KUb4"]' \
+
+
+curl -X POST "http://127.0.0.1:8645/admin/v1/peers" \
+ -H "content-type: application/json" \
+ -d '["/dns4/iZj6c6iy6z1addtti3n1fxZ.jxm.cool/tcp/30303/p2p/16Uiu2HAkxEb6hDVRu1VVjXiAwfWgVWbXAq2sgepjuEmC4HZBUqe8"]' \
+
+
+ curl -X POST "http://127.0.0.1:8645/admin/v1/peers" \
+ -H "content-type: application/json" \
+ -d '["/dns4/node-01.do-ams3.wakuv2.prod.status.im/tcp/30303/p2p/16Uiu2HAmL5okWopX7NqZWBUKVqW8iUxCEmd5GMHLVPwCgzYzQv3e"]' \
+```
+
+
+## waku urls
+
+- [waku-rest-api](https://waku-org.github.io/waku-rest-api/#overview)
+
+
+- [forum](https://forum.vac.dev/about)
