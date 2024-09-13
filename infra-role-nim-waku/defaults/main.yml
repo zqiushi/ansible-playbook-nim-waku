@@ -1,7 +1,7 @@
 ---
 nim_waku_cont_tag: 'deploy-wakuv2-prod'
-#nim_waku_cont_image: 'registry-vpc.cn-hongkong.aliyuncs.com/zqiushi2020/nwaku:{{ nim_waku_cont_tag }}'
-nim_waku_cont_image: 'registry.cn-hongkong.aliyuncs.com/zqiushi2020/nwaku:{{ nim_waku_cont_tag }}'
+nim_waku_cont_image: 'registry-vpc.cn-hongkong.aliyuncs.com/zqiushi2020/nwaku:{{ nim_waku_cont_tag }}'
+# nim_waku_cont_image: 'registry.cn-hongkong.aliyuncs.com/zqiushi2020/nwaku:{{ nim_waku_cont_tag }}'
 nim_waku_cont_name: 'nim-waku'
 nim_waku_cont_vol: '/docker/{{ nim_waku_cont_name }}'
 
